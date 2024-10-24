@@ -6,7 +6,7 @@
 /*   By: ayarab <ayarab@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 11:41:18 by ayarab            #+#    #+#             */
-/*   Updated: 2024/10/23 18:33:59 by ayarab           ###   ########.fr       */
+/*   Updated: 2024/10/24 18:58:41 by ayarab           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #  define BUFFER_SIZE 50
 # endif
 
-# include "./libft/libft.h"
+# include "../libft/libft.h"
 # include <stdarg.h>
 # include <stddef.h>
 # include <stdlib.h>

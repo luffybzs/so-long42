@@ -6,7 +6,7 @@
 /*   By: ayarab <ayarab@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 16:19:02 by ayarab            #+#    #+#             */
-/*   Updated: 2024/10/23 19:34:24 by ayarab           ###   ########.fr       */
+/*   Updated: 2024/10/24 17:32:24 by ayarab           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,11 +63,11 @@ char	*ft_strjoin_free(char *s1, char *s2)
 	return (str);
 }
 
-char	**ft_strdup_2D(const char **src)
+char	**ft_strdup_2D(char **src)
 {
-	size_t j;
-	char **res;
-	
+	size_t	j;
+	char	**res;
+
 	j = 0;
 	res = malloc((ft_strlen_2d(src) + 1) * sizeof(char *));
 	if (res == NULL)
@@ -79,6 +79,21 @@ char	**ft_strdup_2D(const char **src)
 			return (ft_free_char(res), NULL);
 		j++;
 	}
-	res[j] = '\0';
+	res[j] = NULL;
 	return (res);
+}
+int	ft_check_av1(t_data *data)
+{
+	int i;
+	int point;
+
+	i = 0;
+	point = ft_strlen(data->av1) - 4;
+	if (ft_strlen(data->av1) < 4)
+		return (EXIT_FAILURE);
+	if (ft_strcmp(&data->av1[point], ".ber") != 0)
+		return (EXIT_FAILURE);
+	if (data->av1[point - 1] == '/')
+		return (EXIT_FAILURE);
+	return (EXIT_SUCCESS);
 }
